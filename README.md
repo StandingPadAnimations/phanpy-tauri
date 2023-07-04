@@ -2,11 +2,21 @@
 
 The Phanpy Web Client for Mastodon, now as a Tauri app! Please check out the original project: https://github.com/cheeaun/phanpy
 
-This repo only accepts PRs related to the Tauri side of things.
+This fork only accepts PRs related to the Tauri side of things.
 
 Note that there are some issues currently, like a bug where logging in to Mastodon returns `Redirection to URL with a scheme that is not HTTP(S)`. This error disappears if you right click and reload.
 
-## How to build
+## Installing
+Arch binaries are provided under the releases tab, and an AUR package exists as well
+https://aur.archlinux.org/packages/phanpy-tauri
+
+While Tauri creates an appimage, it doesn't seem to work for Phanpy, so it's not distributed.
+
+Required dependencies (Arch packages):
+- gtk3
+- webkit2gtk3-4.1
+
+## How to Build
 [This assumes you have tauri set up](https://tauri.app/v1/guides/getting-started/prerequisites/)
 First you have to install Phanpy's dependencies
 ```sh
