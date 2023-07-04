@@ -32,7 +32,9 @@ export default defineConfig({
   },
   server: {
     host: true,
+    strictPort: true,
   },
+  clearScreen: false,
   plugins: [
     preact(),
     splitVendorChunkPlugin(),
@@ -90,8 +92,11 @@ export default defineConfig({
       },
     }),
   ],
+  envPrefix: ['VITE_', 'TAURI_'],
   build: {
-    sourcemap: true,
+    target: process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari13',
+    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
+    sourcemap: !!process.env.TAURI_DEBUG,
     rollupOptions: {
       treeshake: false,
       input: {
