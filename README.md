@@ -6,6 +6,15 @@ This repo only accepts PRs related to the Tauri side of things.
 
 Note that there are some issues currently, like a bug where logging in to Mastodon returns `Redirection to URL with a scheme that is not HTTP(S)`. This error disappears if you right click and reload.
 
+## How to build
+[This assumes you have tauri set up](https://tauri.app/v1/guides/getting-started/prerequisites/)
+First you have to install Phanpy's dependencies
+```sh
+npm install
+```
+
+Then run `cargo tauri dev` for a dev build or `cargo tauri build` for a production build.
+
 # Original README
 <div align="center">
   <img src="design/logo-4.svg" width="128" height="128" alt="">
