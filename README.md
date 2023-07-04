@@ -1,3 +1,12 @@
+# Phanpy Tauri App
+
+The Phanpy Web Client for Mastodon, now as a Tauri app! Please check out the original project: https://github.com/cheeaun/phanpy
+
+This repo only accepts PRs related to the Tauri side of things.
+
+Note that there are some issues currently, like a bug where logging in to Mastodon returns `Redirection to URL with a scheme that is not HTTP(S)`. This error disappears if you right click and reload.
+
+# Original README
 <div align="center">
   <img src="design/logo-4.svg" width="128" height="128" alt="">
 
