@@ -4,8 +4,6 @@ The Phanpy Web Client for Mastodon, now as a Tauri app! Please check out the ori
 
 This fork only accepts PRs related to the Tauri side of things.
 
-Note that there are some issues currently, like a bug where logging in to Mastodon returns `Redirection to URL with a scheme that is not HTTP(S)`. This error disappears if you right click and reload.
-
 ## Installing
 Arch binaries are provided under the releases tab, and an AUR package exists as well
 https://aur.archlinux.org/packages/phanpy-tauri
@@ -24,6 +22,13 @@ npm install
 ```
 
 Then run `cargo tauri dev` for a dev build or `cargo tauri build` for a production build.
+
+## Known Issues
+Q. Mastodon returns the error `Redirection to URL with a scheme that is not HTTP(S)`
+A. This is due to using Phanpy as a local app (`file://`) and not as a server. This is solved by right clicking and clicking `Reload`
+
+Q. Clicking an image on a post with multiple images causes the UI to freeze
+A. This is due to WebKit's accelerated compositing. Setting `WEBKIT_DISABLE_COMPOSITING_MODE=1` fixes it
 
 # Original README
 <div align="center">
