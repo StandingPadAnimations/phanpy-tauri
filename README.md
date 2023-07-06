@@ -24,11 +24,13 @@ npm install
 Then run `cargo tauri dev` for a dev build or `cargo tauri build` for a production build.
 
 ## Known Issues
-Q. Mastodon returns the error `Redirection to URL with a scheme that is not HTTP(S)`
-A. This is due to using Phanpy as a local app (`file://`) and not as a server. This is solved by right clicking and clicking `Reload`
+Q. Mastodon returns the error `Redirection to URL with a scheme that is not HTTP(S)` when logging in.
 
-Q. Clicking an image on a post with multiple images causes the UI to freeze
-A. This is due to WebKit's accelerated compositing. Setting `WEBKIT_DISABLE_COMPOSITING_MODE=1` fixes it
+A. This is due to using Phanpy as a local app (`file://`) and not as a server. This is solved by right clicking and clicking `Reload`.
+
+Q. Clicking an image on a post with multiple images causes the UI to freeze.
+
+A. This is due to WebKit's accelerated compositing. Setting `WEBKIT_DISABLE_COMPOSITING_MODE=1` fixes it.
 
 # Original README
 <div align="center">
