@@ -1,5 +1,8 @@
 # Phanpy Tauri App
+## Unmaintained
+I'm now working on an Electron version. Tauri was a nice experiment, but on Linux the use of Webkit makes it the resulting app unacceptably slow.
 
+## About
 The Phanpy Web Client for Mastodon, now as a Tauri app! Please check out the original project: https://github.com/cheeaun/phanpy
 
 This fork only accepts PRs related to the Tauri side of things.
